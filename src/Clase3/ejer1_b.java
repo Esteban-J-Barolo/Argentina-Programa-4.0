@@ -1,4 +1,4 @@
-package Clase2;
+package Clase3;
 
 public class ejer1_b {
 
