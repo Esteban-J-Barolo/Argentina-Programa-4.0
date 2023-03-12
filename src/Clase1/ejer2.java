@@ -20,7 +20,7 @@ public class ejer2 {
 		Si no cumple con las condiciones no pertenece.
 
 		c-
-		Imagen
+		Imagen: Clase1AP
 
 		d-
 		*/
