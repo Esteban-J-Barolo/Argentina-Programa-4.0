@@ -14,6 +14,7 @@ public class ejer1_b {
 				numeros[i] = Integer.parseInt(numeroStr);
 				i++;
 			}
+			scn.close();
 		} catch (NumberFormatException e) {
 			System.out.println("No ingreso los numeros.");
 		}
