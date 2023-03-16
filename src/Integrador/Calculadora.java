@@ -1,5 +1,6 @@
 package Integrador;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -18,11 +19,13 @@ public class Calculadora {
 		double resultado;
 		System.out.print("Opción: ");
 		opc = scn.nextInt();
-		System.out.print("Número 1: ");
-		int num1, num2;
-		num1 = scn.nextInt();
-		System.out.print("Número 2: ");
-		num2 = scn.nextInt();
+		int num1=0, num2=0;
+		if (opc==1 && opc==2 && opc==3 && opc==4) {
+			System.out.print("Número 1: ");
+			num1 = scn.nextInt();
+			System.out.print("Número 2: ");
+			num2 = scn.nextInt();
+		}
 		switch (opc) {
 		case 1:
 			resultado=suma(num1, num2);
@@ -41,9 +44,11 @@ public class Calculadora {
 			System.out.println(num1+" / "+num2+" = "+resultado);
 			break;
 		case 5:
+			 
 			break;
 		case 6:
 			scn.close();
+			System.out.println("FIN");
 			seguir = false;
 			break;
 		default:
