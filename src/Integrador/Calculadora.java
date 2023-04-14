@@ -1,5 +1,7 @@
 package Integrador;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -44,7 +46,7 @@ public class Calculadora {
 			System.out.println(num1+" / "+num2+" = "+resultado);
 			break;
 		case 5:
-			 
+			
 			break;
 		case 6:
 			scn.close();
