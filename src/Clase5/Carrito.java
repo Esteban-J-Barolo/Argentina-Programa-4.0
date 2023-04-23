@@ -16,6 +16,10 @@ public class Carrito {
 		this.montoTotal+=precio;
 	}
 	
+	public double getMonto() {
+		return montoTotal;
+	}
+	
 	public void precio() {
 		System.out.println("Monto TOTAL: "+this.montoTotal);
 	}
