@@ -22,7 +22,7 @@ public class Calculadora {
 		System.out.print("Opción: ");
 		opc = scn.nextInt();
 		int num1=0, num2=0;
-		if (opc==1 && opc==2 && opc==3 && opc==4) {
+		if (opc==1 || opc==2 || opc==3 || opc==4) {
 			System.out.print("Número 1: ");
 			num1 = scn.nextInt();
 			System.out.print("Número 2: ");
@@ -45,8 +45,7 @@ public class Calculadora {
 			resultado=div(num1, num2);
 			System.out.println(num1+" / "+num2+" = "+resultado);
 			break;
-		case 5:
-			
+		case 5:  
 			break;
 		case 6:
 			scn.close();
