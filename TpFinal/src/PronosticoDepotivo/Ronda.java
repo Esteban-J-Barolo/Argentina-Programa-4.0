@@ -24,5 +24,12 @@ public class Ronda {
 		}
 		return pts;
 	}
+	
+	public ArrayList<Persona> getParticipantes() {
+		ArrayList<Persona> personas = new ArrayList<Persona>();
+		for(Pronostico pronostico : pronosticos)
+			if ( !personas.contains(pronostico.getPersona()) ) personas.add(pronostico.getPersona());
+		return personas;
+	}
 
 }

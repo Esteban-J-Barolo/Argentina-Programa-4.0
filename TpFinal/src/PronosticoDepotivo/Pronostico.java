@@ -17,8 +17,12 @@ public class Pronostico {
 	public int puntos(Persona persona, int suma) {
 		ResultadoEnum resultadoPart = partido.resultado(equipo);
 		int pts=0;
-		if ( resultado==resultadoPart && this.persona==persona ) pts=suma;
+		if ( resultado==resultadoPart && this.persona==persona) pts=suma;
 		return pts;
+	}
+	
+	public Persona getPersona() {
+		return persona;
 	}
 
 }

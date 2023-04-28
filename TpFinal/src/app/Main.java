@@ -101,22 +101,23 @@ public class Main {
 		bd.registrar();
 		bd.conectar();
 		
-		String consulta = "SELECT * FROM pronostico_deportivo.Equipo;";
+		String consulta = "SELECT equipo1 FROM pronostico_deportivo.Partido \r\n"
+						+ "UNION\r\n"
+						+ "SELECT equipo2 FROM pronostico_deportivo.Partido;";
 		
 		ResultSet resp = bd.consultar(consulta);
 		try {
 			
 			while(resp.next()) {
-				equiposMap.put(resp.getString(1), new Equipo(resp.getString(1),resp.getString(2)));
+				equiposMap.put(resp.getString(1).replace(" ", ""), new Equipo(resp.getString(1)));
 			}
 			
 			consulta = "SELECT * FROM pronostico_deportivo.Partido;";
 			resp = bd.consultar(consulta);
 			
 			while(resp.next()) {
-				rondaMap.put( resp.getString(1), new Ronda(resp.getString(1)) );
-				partidosMap.put( Integer.parseInt(resp.getString(1)), new Partido(	equiposMap.get(resp.getString(2)),
-																					equiposMap.get(resp.getString(3)),
+				partidosMap.put( Integer.parseInt(resp.getString(1)), new Partido(	equiposMap.get(resp.getString(2).replace(" ", "")),
+																					equiposMap.get(resp.getString(3).replace(" ", "")),
 																					resp.getInt(4),
 																					resp.getInt(5),
 																					Integer.parseInt(resp.getString(1))
@@ -142,12 +143,20 @@ public class Main {
 		try {
 			
 			while(resp.next()) {
+				
+				if ( ! pronosticosMap.containsKey(resp.getString(5)) )
+					pronosticosMap.put(resp.getString(5), new ArrayList<Pronostico>());
+				if ( ! rondaMap.containsKey(resp.getString(5)) ) 
+					rondaMap.put( resp.getString(5), new Ronda(resp.getString(5)) );
+				if ( ! personasMap.containsKey(resp.getString(4)) ) 
+					personasMap.put( resp.getString(4), new Persona(resp.getString(4)) );
+				
 				pronosticosMap.get(resp.getString(5)).add(new Pronostico(	partidosMap.get(resp.getInt(1)),
-												equiposMap.get(resp.getString(2)),
-												ResultadoEnum.valueOf(resp.getString(3)),
-												personasMap.get(resp.getString(4))
-												)
-						);
+																			equiposMap.get(resp.getString(2).replace(" ", "")),
+																			ResultadoEnum.valueOf(resp.getString(3)),
+																			personasMap.get(resp.getString(4))
+																		)
+														);
 			}
 			
 		} catch (SQLException e) {
@@ -165,13 +174,13 @@ public class Main {
 	}
 	
 	private static void mostrarPuntaje() {
-		List<Integer> puntos = new ArrayList<Integer>();
-		List<String> nombres = new ArrayList<String>();
 		
 		for (String ronda : rondaMap.keySet()) {
-			for (String persona : personasMap.keySet()) {
-				puntos.add(rondaMap.get(ronda).puntos(personasMap.get(persona),1));
-				nombres.add(persona);;
+			List<Integer> puntos = new ArrayList<Integer>();
+			List<String> nombres = new ArrayList<String>();
+			for (Persona persona : rondaMap.get(ronda).getParticipantes() ) {
+				puntos.add(rondaMap.get(ronda).puntos(persona,1));
+				nombres.add(persona.getNombre());
 			}
 			System.out.println("Ronda N°: "+ronda);
 			

@@ -1,24 +1,34 @@
 ---------------------------------------------------------------------------------------------------------------------------------
 | Equipo 1 	| Gana equipo 1 | Empate	| Gana equipo 2 | Equipo 2	| Persona 	| N° partido 	| N° Ronda	|
 ---------------------------------------------------------------------------------------------------------------------------------
-| Qatar   	| o		| o		| x		| Argentina	| Esteban	| 1		| 1		|
-| Venezuela	| x		| o		| o		| Argentina	| Esteban	| 2		| 1		|
-| Brasil	| o		| x		| o		| Argentina	| Esteban	| 3		| 1		|
-| Argentina	| x		| o		| o		| Chile		| Esteban	| 4		| 1		|
-| Argentina	| o		| o		| x		| Uruguay	| Esteban	| 5		| 1		|
-| Chile		| o		| o		| x		| Argentina	| Esteban	| 6		| 1		|
-| Argentina	| x		| o		| o		| Mexico	| Esteban	| 7		| 1		|
-| Alemania	| o		| x		| o		| Argentina	| Esteban	| 8		| 1		|
-| Ecuador	| x		| o		| o		| Argentina	| Esteban	| 9		| 1		|
-| Brasil	| x		| o		| o		| Argentina	| Esteban	| 10		| 1		|
-| Qatar   	| o		| x		| o		| Argentina	| Javier	| 1		| 1		|
-| Venezuela	| x		| o		| o		| Argentina	| Javier	| 2		| 1		|
-| Brasil	| x		| o		| o		| Argentina	| Javier	| 3		| 1		|
-| Argentina	| x		| o		| o		| Chile		| Javier	| 4		| 1		|
-| Argentina	| o		| o		| x		| Uruguay	| Javier	| 5		| 1		|
-| Chile		| o		| o		| x		| Argentina	| Javier	| 6		| 1		|
-| Argentina	| o		| o		| x		| Mexico	| Javier	| 7		| 1		|
-| Alemania	| o		| o		| x		| Argentina	| Javier	| 8		| 1		|
-| Ecuador	| o		| x		| o		| Argentina	| Javier	| 9		| 1		|
-| Brasil	| x		| o		| o		| Argentina	| Javier	| 10		| 1		|
+|Qatar   	|o		|o		|x		|Argentina	| Esteban	|1		|1		|
+|Venezuela	|x		|o		|o		|Argentina	| Esteban	|2		|1		|
+|Brasil		|o		|x		|o		|Argentina	| Esteban	|3		|1		|
+|Argentina	|x		|o		|o		|Chile		| Esteban	|4		|1		|
+|Argentina	|o		|o		|x		|Uruguay	| Esteban	|5		|1		|
+|Chile		|o		|o		|x		|Argentina	| Esteban	|6		|1		|
+|Argentina	|x		|o		|o		|Mexico		| Esteban	|7		|1		|
+|Alemania	|o		|x		|o		|Argentina	| Esteban	|8		|1		|
+|Ecuador	|x		|o		|o		|Argentina	| Esteban	|9		|1		|
+|Brasil		|x		|o		|o		|Argentina	| Esteban	|10		|1		|
+|Qatar   	|o		|x		|o		|Argentina	| Javier	|1		|1		|
+|Venezuela	|x		|o		|o		|Argentina	| Javier	|2		|1		|
+|Brasil		|x		|o		|o		|Argentina	| Javier	|3		|1		|
+|Argentina	|x		|o		|o		|Chile		| Javier	|4		|1		|
+|Argentina	|o		|o		|x		|Uruguay	| Javier	|5		|1		|
+|Chile		|o		|o		|x		|Argentina	| Javier	|6		|1		|
+|Argentina	|o		|o		|x		|Mexico		| Javier	|7		|1		|
+|Alemania	|o		|o		|x		|Argentina	| Javier	|8		|1		|
+|Ecuador	|o		|x		|o		|Argentina	| Javier	|9		|1		|
+|Brasil		|x		|o		|o		|Argentina	| Javier	|10		|1		|
+---|Platense	|o		|o		|x		|Estudiantes	|Esteban	|10		|2		|
+---|Sarmiento	|o		|o		|x		|Godoy Cruz	|Esteban	|11		|2		|
+---|Tigre		|x		|o		|o		|Huracán	|Esteban	|12		|2		|
+---|Argentinos Jrs	|o		|x		|o		|Gimnasia LP	|Esteban	|13		|2		|
+---|Racing		|x		|o		|o		|Atl Tucumán	|Esteban	|14		|2		|
+---|Barracas Central|o		|o		|x		|Defensa y Justicia|Esteban	|15		|2		|
+---|River Plate	|o		|o		|x		|Independiente	|Esteban	|16		|2		|
+---|Estudiante LP	|x		|o		|o		|Talleres	|Esteban	|17		|2		|
+---|Instituto	|o		|x		|o		|Banfield	|Esteban	|18		|2		|
+---|Rosario Central|x		|o		|o		|Boca Jrs	|Esteban	|19		|2		|
 ---------------------------------------------------------------------------------------------------------------------------------
