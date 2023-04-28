@@ -29,16 +29,16 @@ public class Main {
 	public static void main(String[] args) {
 		
 		cargarPartidosArchivo(Archivo.sacarDatos("C:\\Users\\Esteban\\Desktop\\Arg Prog\\TpFinal\\partidos.txt"));
-		cargarPronosticosArchivo(Archivo.sacarDatos("C:\\Users\\Esteban\\Desktop\\Arg Prog\\TpFinal\\pronosticos.txt"));
-		
 		cargarPartidosBD();
+		
+		cargarPronosticosArchivo(Archivo.sacarDatos("C:\\Users\\Esteban\\Desktop\\Arg Prog\\TpFinal\\pronosticos.txt"));
 		cargarPronosticosBD();
 		
 		cargarRondas();
 		
-		mostrarPuntaje();
+		mostrarPuntaje(2);
 
-		System.out.println("Fin");
+		System.out.println("Fin de rondas.");
 		
 		
 	}
@@ -172,13 +172,13 @@ public class Main {
 		}
 	}
 	
-	private static void mostrarPuntaje() {
+	private static void mostrarPuntaje(int multiplicador) {
 		
 		for (String ronda : rondaMap.keySet()) {
 			List<Integer> puntos = new ArrayList<Integer>();
 			List<String> nombres = new ArrayList<String>();
 			for (Persona persona : rondaMap.get(ronda).getParticipantes() ) {
-				puntos.add(rondaMap.get(ronda).puntos(persona,1));
+				puntos.add(rondaMap.get(ronda).puntos(persona,multiplicador));
 				nombres.add(persona.getNombre());
 			}
 			System.out.println("Ronda N°: "+ronda);
