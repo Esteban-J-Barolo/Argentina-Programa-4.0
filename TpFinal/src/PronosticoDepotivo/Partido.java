@@ -6,9 +6,9 @@ public class Partido {
 	private Equipo equipo2;
 	private int golesEquipo1;
 	private int golesEquipo2;
-	private int nro;
+	private String nro;
 	
-	public Partido(Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2, int nro) {
+	public Partido(Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2, String nro) {
 		this.equipo1=equipo1;
 		this.equipo2=equipo2;
 		this.golesEquipo1=golesEquipo1;
@@ -43,6 +43,10 @@ public class Partido {
 	public boolean estaEquipo(Equipo equipo) {
 		if (equipo1==equipo || equipo2==equipo) return true;
 		else return false;
+	}
+	
+	public String getRonda() {
+		return nro;
 	}
 
 }

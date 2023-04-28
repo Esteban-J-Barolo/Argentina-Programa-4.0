@@ -3,7 +3,6 @@ package app;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -56,7 +55,7 @@ public class Main {
 																	equiposMap.get(fila[4]),
 																	Integer.parseInt(fila[2]), 
 																	Integer.parseInt(fila[3]),
-																	Integer.parseInt(fila[6]))
+																	fila[6])
 						);
 		}
 	}
@@ -120,7 +119,7 @@ public class Main {
 																					equiposMap.get(resp.getString(3).replace(" ", "")),
 																					resp.getInt(4),
 																					resp.getInt(5),
-																					Integer.parseInt(resp.getString(1))
+																					resp.getString(1)
 																				)
 								);
 			}

@@ -31,5 +31,9 @@ public class Ronda {
 			if ( !personas.contains(pronostico.getPersona()) ) personas.add(pronostico.getPersona());
 		return personas;
 	}
+	
+	public String getNro() {
+		return nro;
+	}
 
 }
